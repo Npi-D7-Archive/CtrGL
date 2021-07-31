@@ -34,6 +34,6 @@ jobs:
         run: |
           cd ..
           git clone https://github.com/kentaromiura/Cealina.git c
-          mv -r c/* Cealina
+          mv -r c/* Caelina
           echo Add other actions to build,
           echo test, and deploy your project.
