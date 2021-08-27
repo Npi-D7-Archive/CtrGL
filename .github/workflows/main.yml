@@ -27,23 +27,6 @@ jobs:
           submodules: recursive
       - name: Install tools
         run: |
-          cd ..
-          mkdir n
-          cd n
-          tar -xf ../CtrGL/3ds-tools-linux-r6.tar.gz
-          cd 3ds-tools
-          ls -r
-          cp -r nihstro-disassemble ../../CtrGL
-          cp -r nihstro-assemble ../../CtrGL
-          cd ..
-          cd ..
-          cd CtrGL
-          git config --global user.email "tobid7@outlook.de"
-          git config --global user.name "Tobi-D7"
-          #commit
-          git stage *
-          git commit -m "update extlibs1"
-          git push origin main --force
           sudo apt-get update
           sudo apt-get install p7zip-full -y
           curl -L https://github.com/Steveice10/bannertool/releases/download/1.2.0/bannertool.zip -o bannertool.zip
