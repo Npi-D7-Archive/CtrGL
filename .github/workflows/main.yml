@@ -49,7 +49,7 @@ jobs:
           cd ../examples/gles/simple_tri/
           make
           mkdir -p ~/artifacts
-          
+          cp simple_tri.3dsx ~/artifacts
           echo ::set-output name=commit_tag::$(git describe --abbrev=0 --tags)
           echo ::set-output name=commit_hash::$(git log --format=%h -1)
           # Webhook info
