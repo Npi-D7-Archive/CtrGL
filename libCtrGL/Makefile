@@ -24,4 +24,4 @@ dist-bin: all
 
 install: dist-bin
 	mkdir -p $(DEVKITPRO)/libctru
-	bzip2 -cd libcaelina-$(VERSION).tar.bz2 | tar -x -C $(DEVKITPRO)/libctru
+	bzip2 -cd libCtrGL-$(VERSION).tar.bz2 | tar -x -C $(DEVKITPRO)/libctru
