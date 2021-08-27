@@ -46,7 +46,7 @@ jobs:
           cd libCtrGL
           make
           make install
-          cd examples/gles/simple_tri/
+          cd ../examples/gles/simple_tri/
           make
           mkdir -p ~/artifacts
           
