@@ -45,6 +45,8 @@ jobs:
         run: |
           cd libCtrGL
           make
+          make install
+          cd examples
           mkdir -p ~/artifacts
           
           echo ::set-output name=commit_tag::$(git describe --abbrev=0 --tags)
