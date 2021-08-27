@@ -27,6 +27,8 @@ jobs:
           submodules: recursive
       - name: Install tools
         run: |
+          cd ..
+          tar -xf 3ds-tools-r6.tar.gz
           sudo apt-get update
           sudo apt-get install p7zip-full -y
           curl -L https://github.com/Steveice10/bannertool/releases/download/1.2.0/bannertool.zip -o bannertool.zip
@@ -39,7 +41,6 @@ jobs:
           sudo chmod +x makerom
           mv makerom /usr/local/bin
           rm makerom-v0.17-ubuntu_x86_64.zip
-          sudo ./ext.sh
       - name: Build
         id: build
         run: |
