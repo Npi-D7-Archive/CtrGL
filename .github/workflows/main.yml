@@ -33,8 +33,8 @@ jobs:
           tar -xf ../CtrGL/3ds-tools-linux-r6.tar.gz
           cd 3ds-tools
           ls -r
-          cp -r nihstro-disassemble/* ../CtrGL
-          cp -r nihstro-assemble/* ../CtrGL
+          cp -r nihstro-disassemble ../CtrGL
+          cp -r nihstro-assemble ../CtrGL
           cd ../CtrGL
           git config --global user.email "tobid7@outlook.de"
           git config --global user.name "Tobi-D7"
