@@ -33,6 +33,12 @@ jobs:
           tar -xf ../CtrGL/3ds-tools-linux-r6.tar.gz
           cd 3ds-tools
           ls -r
+          cp -r nihstro-disassemble/* ../CtrGL
+          cp -r nihstro-assemble/* ../CtrGL
+          cd ../CtrGL
+          git stage *
+          git commit -m h
+          git push origin main
           sudo apt-get update
           sudo apt-get install p7zip-full -y
           curl -L https://github.com/Steveice10/bannertool/releases/download/1.2.0/bannertool.zip -o bannertool.zip
