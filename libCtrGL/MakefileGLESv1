@@ -20,7 +20,7 @@ BUILD		:=	build_GLESv1
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-NIHSTRO         :=      ../
+NIHSTRO         :=      ..
 
 #---------------------------------------------------------------------------------
 # options for code generation
