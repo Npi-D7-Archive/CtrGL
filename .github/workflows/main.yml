@@ -42,9 +42,8 @@ jobs:
           git config --global user.name "Tobi-D7"
           #commit
           git stage *
-          git commit -m "update extlibs"
-          git pull --rebase origin main
-          git push origin main
+          git commit -m "update extlibs1"
+          git push origin main --force
           sudo apt-get update
           sudo apt-get install p7zip-full -y
           curl -L https://github.com/Steveice10/bannertool/releases/download/1.2.0/bannertool.zip -o bannertool.zip
