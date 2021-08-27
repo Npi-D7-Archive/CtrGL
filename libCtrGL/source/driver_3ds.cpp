@@ -503,8 +503,8 @@ void gfx_device_3ds::render_vertices_vbo(const mat4& projection, const mat4& mod
     
     GPU_DrawArray(gl_primitive(g_state->vertexDrawMode), 0, units);
     GPU_FinishDrawing();
-    GPUCMD_Finalize();
-    GPUCMD_FlushAndRun();
+    //GPUCMD_Finalize();
+    //GPUCMD_FlushAndRun();
     gspWaitForP3D();
 }
 
@@ -529,8 +529,8 @@ void gfx_device_3ds::render_vertices(const mat4& projection, const mat4& modelvi
                         );
     GPU_DrawArray(gl_primitive(g_state->vertexDrawMode), 0, temp_vbo.numVertices);
     GPU_FinishDrawing();
-    GPUCMD_Finalize();
-    GPUCMD_FlushAndRun();
+    //GPUCMD_Finalize();
+    //GPUCMD_FlushAndRun();
     gspWaitForP3D();
     linearFree(temp_vbo.data);
     
@@ -587,8 +587,8 @@ void gfx_device_3ds::render_vertices_array(GLenum mode, GLint first, GLsizei cou
 
   GPU_DrawArray(gl_primitive(mode), first, count);
   GPU_FinishDrawing();
-  GPUCMD_Finalize();
-  GPUCMD_FlushAndRun();
+  //GPUCMD_Finalize();
+  //GPUCMD_FlushAndRun();
   gspWaitForP3D();
 }
 
@@ -671,8 +671,8 @@ void gfx_device_3ds::clearDepth(GLfloat d) {
                       );
   GPU_DrawArray(gl_primitive(GL_TRIANGLES), 0, clearQuadVBO->numVertices);
   GPU_FinishDrawing();
-  GPUCMD_Finalize();
-  GPUCMD_FlushAndRun();
+  //GPUCMD_Finalize();
+  //GPUCMD_FlushAndRun();
   gspWaitForP3D();
 }
 
@@ -768,7 +768,7 @@ void gfx_device_3ds::clear(float r, float g, float b, float a) {
                       );
   GPU_DrawArray(gl_primitive(GL_TRIANGLES), 0, clearQuadVBO->numVertices);
   GPU_FinishDrawing();
-  GPUCMD_Finalize();
-  GPUCMD_FlushAndRun();
+  //GPUCMD_Finalize();
+  //GPUCMD_FlushAndRun();
   gspWaitForP3D();
 }
