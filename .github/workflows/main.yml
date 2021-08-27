@@ -42,7 +42,7 @@ jobs:
           git config --global user.name "Tobi-D7"
           #commit
           git stage *
-          git commit -m h
+          git commit -m "update extlibs"
           git push origin main
           sudo apt-get update
           sudo apt-get install p7zip-full -y
