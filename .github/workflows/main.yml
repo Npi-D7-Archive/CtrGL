@@ -31,6 +31,7 @@ jobs:
           mkdir n
           cd n
           tar -xf ../CtrGL/3ds-tools-linux-r6.tar.gz
+          cd 3ds-tools
           ls -r
           sudo apt-get update
           sudo apt-get install p7zip-full -y
