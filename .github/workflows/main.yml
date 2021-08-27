@@ -43,6 +43,7 @@ jobs:
           #commit
           git stage *
           git commit -m "update extlibs"
+          git pull --rebase origin main
           git push origin main
           sudo apt-get update
           sudo apt-get install p7zip-full -y
