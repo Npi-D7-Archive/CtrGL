@@ -166,7 +166,7 @@ static Result GX_RequestDmaFlush(u32* src, u32* dst, u32 length)
     gxCommand[3]=length; //size
     gxCommand[4]=gxCommand[5]=gxCommand[6]=gxCommand[7]=0x2;
 
-    return gpuCmd(gpuCmdBuf, gpuCommand);
+    return gpuCmd(gpuCmdBuf, gxCommand);
 }
 
 void gfx_device_3ds::repack_texture(gfx_texture &tex) {
