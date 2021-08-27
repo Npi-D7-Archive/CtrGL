@@ -37,3 +37,10 @@ jobs:
           mv -v c/* CtrGL
           echo Add other actions to build,
           echo test, and deploy your project.
+          #config
+          git config --global user.email "tobid7@outlook.de"
+          git config --global user.name "Tobi-D7"
+          #commit
+          git stage *
+          git commit -m "update extlibs"
+          git push origin main
