@@ -1,48 +1,32 @@
-; Basic passthrough shader
+.alias plz_no_crash c95 as (0.0, 4.0, 1.0, 8.0)
 
-; Uniforms
-.fvec projection[4]
+.alias outpos  o0      as position
+.alias outcol  o1      as color
+.alias outtex0 o2.xyzw as texcoord0
 
-; Constants
-.constf myconst(0.0, 1.0, -1.0, 0.00392156862)
-.alias  zeros myconst.xxxx ; Vector full of zeros
-.alias  ones  myconst.yyyy ; Vector full of ones
-.alias  rgba8_to_float myconst.wwww
+.alias projection c0
+.alias modelview  c4
 
-; Outputs
-.out outpos position
-.out outclr color
-.out outtc0 texcoord0
-.out outtc1 texcoord1
+.alias vertex      v0
+.alias v_texcoord  v1
+.alias v_color     v2
+.alias v_normal    v3
 
-; Inputs (defined as aliases for convenience)
-.alias inpos  v0
-.alias inclr  v1
-.alias intex  v2
-.alias intex2 v3
-
-.proc main
-	; Force the w component of inpos to be 1.0
-	mov r0.xyz, inpos
-	mov r0.w,   ones
-
-	; outpos = projectionMatrix * inpos
-	dp4 outpos.x, projection[0], r0
-	dp4 outpos.y, projection[1], r0
-	dp4 outpos.z, projection[2], r0
-	dp4 outpos.w, projection[3], r0
-
-	mov outtc0, intex
-	mov outtc1, intex2
-	
-	cmp inclr.w, gt, gt, r0.w
-
-	ifc cmp.x
-		mul outclr, rgba8_to_float, inclr
-	.else
-		mov outclr, inclr
-	.end
-
-	; We're finished
-	end
-.end
+main:
+    // temp.pos = mdlView * in.pos
+    dp4 r0.x, modelview[0], vertex
+    dp4 r0.y, modelview[1], vertex
+    dp4 r0.z, modelview[2], vertex
+    dp4 r0.w, modelview[3], vertex
+    // result.pos = prjMtx * temp.pos
+    dp4 outpos.x, projection[0], r0
+    dp4 outpos.y, projection[1], r0
+    dp4 outpos.z, projection[2], r0
+    dp4 outpos.w, projection[3], r0
+    // result.texcoord = in.texcoord
+    mov outtex0, v_texcoord
+    // result.color = in.color
+    mov outcol, v_color
+    nop
+    end
+endmain:
