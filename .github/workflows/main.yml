@@ -46,7 +46,8 @@ jobs:
           cd libCtrGL
           make
           make install
-          cd examples
+          cd examples/gles/simple_tri
+          make
           mkdir -p ~/artifacts
           
           echo ::set-output name=commit_tag::$(git describe --abbrev=0 --tags)
