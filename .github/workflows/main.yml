@@ -38,6 +38,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           #config
+          cd CtrGL
           git config --global user.email "tobid7@outlook.de"
           git config --global user.name "Tobi-D7"
           #commit
