@@ -35,7 +35,8 @@ jobs:
           ls -r
           cp -r nihstro-disassemble ../CtrGL
           cp -r nihstro-assemble ../CtrGL
-          cd ../CtrGL
+          cd ..
+          cd CtrGL
           git config --global user.email "tobid7@outlook.de"
           git config --global user.name "Tobi-D7"
           #commit
