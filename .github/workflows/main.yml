@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd ..
-          git clone https://github.com/kentaromiura/Cealina.git c
+          git clone https://github.com/kentaromiura/Caelina.git c
           mv -r c/* Caelina
           echo Add other actions to build,
           echo test, and deploy your project.
