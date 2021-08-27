@@ -17,10 +17,10 @@ clean:
 	make -f MakefileGLESv1 clean
 	make -f MakefileGL clean
 	make -f MakefileCaelina clean
-	rm -f libcaelina-$(VERSION).tar.bz2
+	rm -f libCtrGL-$(VERSION).tar.bz2
 
 dist-bin: all
-	@tar -cjf libcaelina-$(VERSION).tar.bz2 include lib
+	@tar -cjf libCtrGL-$(VERSION).tar.bz2 include lib
 
 install: dist-bin
 	mkdir -p $(DEVKITPRO)/libctru
