@@ -105,6 +105,8 @@ jobs:
           git config --global user.name "Tobi-D7"
           echo running
           echo creating dirs
+          git clone https://github.com/Tobi-D7/CtrGL.git
+          cd CtrGL
           ls -R
           mkdir -p bin/simple_tri/
           cd bin/simple_tri/
