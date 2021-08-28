@@ -20,7 +20,6 @@ BUILD		:=	build_caelina
 SOURCES		:=	source/caelina
 DATA		:=	
 INCLUDES	:=	include source
-NIHSTRO         :=      ..
 
 #---------------------------------------------------------------------------------
 # options for code generation
