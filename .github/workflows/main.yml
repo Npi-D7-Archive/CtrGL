@@ -114,4 +114,4 @@ jobs:
           git stage .
           git commit -m "simple_tri | $COMMIT_HASH"
           git tag v$CURRENT_DATE
-          git push origin master v$CURRENT_DATE
+          git push origin main v$CURRENT_DATE
