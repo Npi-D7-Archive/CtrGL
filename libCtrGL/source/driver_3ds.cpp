@@ -770,5 +770,6 @@ void gfx_device_3ds::clear(float r, float g, float b, float a) {
   GPU_FinishDrawing();
   //GPUCMD_Finalize();
   //GPUCMD_FlushAndRun();
+  gxCmdQueueRun(gpuCmd);
   gspWaitForP3D();
 }
