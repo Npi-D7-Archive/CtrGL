@@ -1,4 +1,4 @@
-CtrGL
+LibCtrGL
 =======
 
 An OpenGL Implementation for 3DS
